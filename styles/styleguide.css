@@ -1,0 +1,37 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-size-xs: 0.8rem;
+  --font-size-s: 1rem;
+  --font-size-m: 1.3rem;
+  --font-size-l: 1.6rem;
+  --font-size-xl: 1.9rem;
+  --font-size-xxl: 2.2rem;
+}
+
+body {
+  font-size: var(--font-size-s);
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+.h1-font {
+  font-size: var(--font-size-xxl);
+}
+
+.h2-font {
+  font-size: var(--font-size-xl);
+}
+
+.h3-font {
+  font-size: var(--font-size-l);
+}
