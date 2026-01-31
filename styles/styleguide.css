@@ -26,9 +26,9 @@
   --font-size-xs: 0.8rem;
   --font-size-s: 1rem;
   --font-size-m: 1.3rem;
-  --font-size-l: 1.6rem;
-  --font-size-xl: 1.9rem;
-  --font-size-xxl: 2.2rem;
+  --font-size-l: 1rem;
+  --font-size-xl: clamp(2.5rem, 10vw, 6rem);
+  --font-size-xxl: clamp(2.5rem, 10vw, 6rem);
 
   --navy-blue-color: #010154;
   --white-color: #fff;
@@ -36,9 +36,10 @@
   --charleston-green-color: #2a2829;
   --alabaster-color: #f0ebe5;
   --pastel-gray-color: #dcd2bf;
+  --black-color: #000;
 
-  --line-height-p: 1.4;
-  --line-height-heading: 1.2;
+  --line-height-p: 1.5;
+  --line-height-heading: 1;
 }
 
 body {
@@ -47,19 +48,38 @@ body {
   font-weight: 400;
 }
 
+p {
+  line-height: var(--line-height-p);
+}
+
 ul,
 li {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
+.anchor-link {
+  color: var(--white-color);
+  border-radius: 10rem;
+  font-weight: 500;
+  padding: 0.8rem 2rem;
+  background: var(--black-color);
+}
+
 .h1-font {
   font-size: var(--font-size-xxl);
+  line-height: var(--line-height-heading);
 }
 
 .h2-font {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-l);
+  font-weight: 500;
 }
 
 .h3-font {
-  font-size: var(--font-size-l);
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-heading);
 }
