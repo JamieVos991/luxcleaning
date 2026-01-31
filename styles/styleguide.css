@@ -6,6 +6,22 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "Satoshi";
+  src: url("../assets/fonts/OTF/Satoshi-Black.otf") format("woff2"),
+    url("../assets/fonts/TTF/Satoshi-Variable.ttf") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../assets/fonts/OTF/Satoshi-Medium.otf") format("woff2"),
+    url("../assets/fonts/TTF/Satoshi-Variable.ttf") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
 :root {
   --font-size-xs: 0.8rem;
   --font-size-s: 1rem;
@@ -27,6 +43,12 @@
 
 body {
   font-size: var(--font-size-s);
+  font-family: "Satoshi";
+  font-weight: 400;
+}
+
+h2 {
+  font-weight: 400;
 }
 
 ul,
