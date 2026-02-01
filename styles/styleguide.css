@@ -2,6 +2,7 @@
 *::before,
 *::after {
   margin: 0;
+  scroll-behavior: smooth;
   padding: 0;
   box-sizing: border-box;
 }
@@ -27,7 +28,7 @@
   --font-size-s: 1rem;
   --font-size-m: 1.3rem;
   --font-size-l: 1rem;
-  --font-size-xl: clamp(2.5rem, 10vw, 6rem);
+  --font-size-xl: clamp(2.5rem, 8vw, 6rem);
   --font-size-xxl: clamp(2.5rem, 10vw, 6rem);
 
   --navy-blue-color: #010154;
@@ -79,7 +80,20 @@ a {
   font-weight: 500;
 }
 
-.h3-font {
+.heading-paragraaf {
   font-size: var(--font-size-xl);
-  line-height: var(--line-height-heading);
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--white-color);
+  position: relative;
+  display: inline-block;
+}
+
+.span-background {
+  position: relative;
+  z-index: 2;
+  padding: 0 0.4rem;
+  margin-left: -0.4rem;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }

@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="nl">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Luxcleaning</title>
 
     <script type="module" src="./scripts/script.js"></script>
-    <link rel="stylesheet" href="./styles/app.css">
-    <link rel="stylesheet" href="./styles/styleguide.css">
+    <link rel="stylesheet" href="./styles/app.css" />
+    <link rel="stylesheet" href="./styles/styleguide.css" />
   </head>
   <body>
     <main>
@@ -23,7 +23,9 @@
               bedrijven. Een schitterende oplossing! Neem gerust contact op, of
               vraag vrijblijvend een offerte.
             </p>
-            <a class="anchor-link" href="#">Offerte aanvragen</a>
+            <a class="anchor-link" href="#offerte-aanvragen"
+              >Offerte aanvragen</a
+            >
           </li>
         </ul>
       </section>
@@ -31,23 +33,50 @@
       <section>
         <hgroup>
           <h2 class="h2-font">Over ons</h2>
-          <p>Waarom moet je voor ons kiezen?</p>
+          <p class="heading-paragraaf">
+            <span class="span-background">Waarom moet</span> u voor ons kiezen?
+          </p>
         </hgroup>
         <p>
           Lux Cleaning reinigt uw ramen, koepels, veranda’s, kozijnen, dakgoten,
           rolluiken, zonnepanelen, lichtreclame en gevelbeplating. Wij bieden
           service aan particulieren, kleine en grote ondernemingen.
         </p>
-        <img
-          src="assets/image-1.png"
-          alt="Professionele glazenwasser aan het werk bij een klant"
-        >
+        <div class="comparison-slider">
+          <img
+            src="assets/image-schoon.jpg"
+            alt="Ramen na de schoonmaakbeurt"
+            class="image-after"
+          />
+
+          <div class="image-overlay">
+            <img
+              src="assets/image-vies.jpg"
+              alt="Ramen voor de schoonmaakbeurt"
+              class="image-before"
+            />
+          </div>
+
+          <input
+            type="range"
+            min="0"
+            max="100"
+            value="50"
+            class="slider"
+            aria-label="Percentage van voor/na vergelijking"
+          />
+
+          <div class="slider-button" aria-hidden="true"></div>
+        </div>
       </section>
 
       <section>
         <hgroup>
-          <h2>Services</h2>
-          <p>Onze Expertise en Dienstverlening</p>
+          <h2 class="h2-font">Services</h2>
+          <p class="heading-paragraaf">
+            <span class="span-background">Onze expertise</span> en
+            dienstverlening
+          </p>
         </hgroup>
         <p>
           Lux Cleaning reinigt uw ramen, koepels, veranda’s, kozijnen, dakgoten,
@@ -55,25 +84,49 @@
           service aan particulieren, kleine en grote ondernemingen.
         </p>
         <article>
-          <ul>
-            <li><p>01</p></li>
-            <li><h4>Ramen binnen en buiten</h4></li>
-            <li>
-              <p>
-                Een streeploze reiniging van al uw glaswerk binnen en buiten,
-                ook op moeilijke bereikbare plaatsen.
-              </p>
-            </li>
-          </ul>
+          <p>01</p>
+          <h4>Ramen binnen en buiten</h4>
+          <p>
+            Een streeploze reiniging van al uw glaswerk binnen en buiten, ook op
+            moeilijke bereikbare plaatsen.
+          </p>
+        </article>
+        <article>
+          <p>02</p>
+          <h4>Koepels en veranda’s</h4>
+          <p>
+            De Schoonmaak hiervan kan een lastig karweitje zijn. Wij nemen dit
+            met plezier van u over.
+          </p>
+        </article>
+        <article>
+          <p>03</p>
+          <h4>Zonnen panelen</h4>
+          <p>
+            Vervuiling heeft een nefaste werking op het rendement van
+            zonnepanelen. Lux Cleaning gebruikt een speciale osmose
+            reinigingstechniek op basis van gefilterd water om de delicate
+            beschermingslaag van de panelen te vrijwaren van schade.
+          </p>
+        </article>
+        <article>
+          <p>04</p>
+          <h4>Rolluiken en dakgoten</h4>
+          <p>
+            Geef mos, stof en vuiligheid geen kans om zich vast te hechten.
+            Verleng de levensduur van uw rolluiken. Voorkom waterschade door een
+            verstopte waterafvoer. Laat minstens één keer per jaar uw dakgoten
+            reinigen.
+          </p>
         </article>
       </section>
 
-      <section>
+      <section id="offerte-aanvragen">
         <hgroup>
-          <h2>
-            <h2>Offerte aanvragen</h2>
-            <p>Vraag gratis een offerte aan!</p>
-          </h2>
+          <h2 class="h2-font">Offerte aanvragen</h2>
+          <p class="heading-paragraaf">
+            Vraag <span class="span-background">gratis</span> een offerte aan!
+          </p>
         </hgroup>
         <p>Neem gerust contact op, of vraag vrijblijvend een offerte.</p>
 
@@ -82,19 +135,19 @@
             <legend>Info</legend>
             <label>
               Naam
-              <input type="text">
+              <input type="text" />
             </label>
             <label>
               E-mail adres
-              <input type="email">
+              <input type="email" />
             </label>
             <label>
               Telefoon
-              <input type="tel">
+              <input type="tel" />
             </label>
             <label>
               Bedrijf
-              <input type="text">
+              <input type="text" />
             </label>
           </fieldset>
 
@@ -102,39 +155,39 @@
             <legend>Regio</legend>
             <label>
               Adres
-              <input type="text">
+              <input type="text" />
             </label>
             <label>
               Postcode
-              <input type="text">
+              <input type="text" />
             </label>
             <label>
               Gemeente
-              <input type="text">
+              <input type="text" />
             </label>
           </fieldset>
 
           <fieldset>
             <legend>Doel</legend>
-            <input type="radio" name="doel">
-            <input type="radio" name="doel">
+            <input type="radio" name="doel" />
+            <input type="radio" name="doel" />
           </fieldset>
 
           <fieldset>
             <legend>U wenst een offerte voor</legend>
-            <label>Ramen <input type="checkbox"></label>
-            <label>Zonnepanelen <input type="checkbox"></label>
-            <label>Veranda's <input type="checkbox"></label>
-            <label>Rolluiken <input type="checkbox"></label>
-            <label>Garagepoorten <input type="checkbox"></label>
-            <label>Dakgoten <input type="checkbox"></label>
+            <label>Ramen <input type="checkbox" /></label>
+            <label>Zonnepanelen <input type="checkbox" /></label>
+            <label>Veranda's <input type="checkbox" /></label>
+            <label>Rolluiken <input type="checkbox" /></label>
+            <label>Garagepoorten <input type="checkbox" /></label>
+            <label>Dakgoten <input type="checkbox" /></label>
           </fieldset>
 
           <label
             >Extra opmerkingen
             <textarea></textarea>
           </label>
-          <input type="submit" value="Verzenden">
+          <input type="submit" value="Verzenden" />
         </form>
       </section>
       <section>
@@ -143,10 +196,10 @@
     </main>
 
     <footer>
-      <img
+      <!-- <img
         src="assets/lux-logo.png"
         alt="Luxcleaning - Ga naar de startpagina"
-      >
+      > -->
       <a lang="en" href="#">Terms & Conditions</a>
       <a lang="en" href="#">Privacy Policy</a>
     </footer>
