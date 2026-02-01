@@ -124,6 +124,19 @@ main {
   }
 }
 
+#naarBovenKnop {
+  border-radius: 50%;
+  background: var(--dark-sky-blue-color);
+  border: none;
+  width: 3.5rem;
+  aspect-ratio: 1;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 10;
+  position: fixed;
+  cursor: pointer;
+}
+
 .comparison-slider {
   position: relative;
   width: 100%;
