@@ -73,9 +73,44 @@ main {
         background: var(--navy-blue-color);
         color: var(--white-color);
         padding: 1rem;
+        position: relative;
+        display: grid;
+        gap: 0.5rem;
 
-        &:first-of-type {
+        &:nth-of-type(1) {
           margin-top: 1rem;
+
+          &::after {
+            content: "01";
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: var(--font-size-l);
+          }
+        }
+
+        &:nth-of-type(2)::after {
+          content: "02";
+          position: absolute;
+          top: 1rem;
+          right: 1rem;
+          font-size: var(--font-size-l);
+        }
+
+        &:nth-of-type(3)::after {
+          content: "03";
+          position: absolute;
+          top: 1rem;
+          right: 1rem;
+          font-size: var(--font-size-l);
+        }
+
+        &:nth-of-type(4)::after {
+          content: "04";
+          position: absolute;
+          top: 1rem;
+          right: 1rem;
+          font-size: var(--font-size-l);
         }
       }
     }
