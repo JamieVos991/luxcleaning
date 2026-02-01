@@ -66,6 +66,7 @@ a {
   color: var(--white-color);
   border-radius: 10rem;
   font-weight: 500;
+  width: max-content;
   padding: 0.8rem 2rem;
   background: var(--black-color);
 }

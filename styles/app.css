@@ -13,45 +13,25 @@ main {
       height: 100dvh;
       place-content: center;
       text-align: center;
+      justify-items: center;
 
-      ul {
-        li {
-          display: flex;
-          gap: 2.5rem;
-          flex-direction: column;
-          align-items: center;
+      small {
+        color: var(--navy-blue-color);
+        font-size: var(--font-size-s);
+      }
 
-          small {
-            color: var(--navy-blue-color);
-            font-size: var(--font-size-s);
-          }
+      h1 {
+        max-width: 60rem;
 
-          h1 {
-            max-width: 60rem;
-
-            span {
-              position: relative;
-              color: white;
-              display: inline-block;
-
-              &::after {
-                background: var(--navy-blue-color);
-                content: "";
-                z-index: -1;
-                height: 100%;
-                width: 100%;
-                top: 0.5rem;
-                right: 0;
-                position: absolute;
-              }
-            }
-          }
-
-          p {
-            max-width: 30rem;
-            justify-self: center;
-          }
+        span {
+          background: var(--navy-blue-color);
+          color: var(--white-color);
         }
+      }
+
+      p {
+        max-width: 30rem;
+        justify-self: center;
       }
     }
     &:nth-of-type(2) {
