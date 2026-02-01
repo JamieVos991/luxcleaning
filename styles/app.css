@@ -136,20 +136,47 @@ main {
         }
       }
     }
+
+    &:nth-of-type(5) {
+      hgroup {
+        p {
+          color: var(--navy-blue-color);
+
+          span {
+            background: var(--navy-blue-color);
+            color: var(--white-color);
+          }
+        }
+      }
+    }
+  }
+
+  #naarBovenKnop {
+    border-radius: 50%;
+    background: var(--dark-sky-blue-color);
+    border: none;
+    width: 3.5rem;
+    aspect-ratio: 1;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 10;
+    position: fixed;
+    cursor: pointer;
   }
 }
 
-#naarBovenKnop {
-  border-radius: 50%;
-  background: var(--dark-sky-blue-color);
-  border: none;
-  width: 3.5rem;
-  aspect-ratio: 1;
-  bottom: 1rem;
-  right: 1rem;
-  z-index: 10;
-  position: fixed;
-  cursor: pointer;
+footer {
+  background: var(--navy-blue-color);
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  a {
+    color: var(--white-color);
+    text-decoration: underline;
+  }
 }
 
 .comparison-slider {
@@ -177,7 +204,6 @@ main {
     z-index: 2;
   }
 
-  /* De eigenlijke range input die over de foto ligt */
   .slider {
     position: absolute;
     inset: 0;
@@ -189,7 +215,6 @@ main {
     margin: 0;
   }
 
-  /* Het zichtbare lijntje */
   .slider-button {
     position: absolute;
     top: 0;
