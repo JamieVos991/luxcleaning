@@ -22,16 +22,20 @@ main {
 
       h1 {
         max-width: 60rem;
+        animation: fadeInUp 1s ease-out forwards;
+        opacity: 0;
 
         span {
           background: var(--navy-blue-color);
           color: var(--white-color);
+          display: inline-block;
+          padding: 0 0.5rem;
         }
       }
 
       p {
-        max-width: 30rem;
-        justify-self: center;
+        animation: fadeInUp 1s ease-out 0.3s forwards;
+        opacity: 0;
       }
     }
     &:nth-of-type(2) {
@@ -238,5 +242,16 @@ footer {
       border-radius: 50%;
       font-weight: bold;
     }
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
