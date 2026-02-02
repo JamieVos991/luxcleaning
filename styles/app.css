@@ -12,18 +12,14 @@ main {
     &:nth-of-type(1) {
       height: 100dvh;
       place-content: center;
-      text-align: center;
-      justify-items: center;
+      gap: 2.5rem;
 
-      small {
-        color: var(--navy-blue-color);
-        font-size: var(--font-size-s);
+      img {
+        width: 14rem;
       }
 
       h1 {
         max-width: 60rem;
-        animation: fadeInUp 1s ease-out forwards;
-        opacity: 0;
 
         span {
           background: var(--navy-blue-color);
@@ -32,12 +28,8 @@ main {
           padding: 0 0.5rem;
         }
       }
-
-      p {
-        animation: fadeInUp 1s ease-out 0.3s forwards;
-        opacity: 0;
-      }
     }
+
     &:nth-of-type(2) {
       color: var(--white-color);
       background-color: var(--navy-blue-color);
@@ -338,7 +330,6 @@ footer {
 /* Navigatie */
 .carousel-nav {
   display: flex;
-  justify-content: center;
   gap: 1rem;
   margin-top: 1rem;
 }
