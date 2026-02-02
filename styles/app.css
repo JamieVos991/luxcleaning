@@ -185,19 +185,6 @@ main {
         }
       }
     }
-
-    figure {
-      hgroup {
-        p {
-          color: var(--navy-blue-color);
-
-          span {
-            background: var(--navy-blue-color);
-            color: var(--white-color);
-          }
-        }
-      }
-    }
   }
 
   #naarBovenKnop {
@@ -211,6 +198,26 @@ main {
     z-index: 10;
     position: fixed;
     cursor: pointer;
+  }
+
+  figure {
+    padding: 3rem 1.5rem;
+    display: grid;
+    gap: 1.5rem;
+
+    hgroup {
+      display: grid;
+      gap: 1.5rem;
+
+      p {
+        color: var(--navy-blue-color) !important;
+
+        span {
+          background: var(--navy-blue-color);
+          color: var(--white-color);
+        }
+      }
+    }
   }
 }
 
@@ -269,7 +276,6 @@ footer {
     top: 0;
     left: 50%;
     width: 4px;
-    height: 100%;
     background: white;
     z-index: 3;
     pointer-events: none;
@@ -299,4 +305,59 @@ footer {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Slider Basis */
+.carousel-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  gap: 1rem;
+  padding: 1rem 0;
+  list-style: none;
+  scrollbar-width: none; /* Verberg scrollbar Firefox */
+}
+
+.carousel-slider::-webkit-scrollbar {
+  display: none; /* Verberg scrollbar Chrome/Safari */
+}
+
+.carousel-slider li {
+  flex: 0 0 60%; /* Compactere afbeeldingen op mobiel */
+  scroll-snap-align: center;
+}
+
+.carousel-slider img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Navigatie */
+.carousel-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.carousel-nav button {
+  background: var(--navy-blue-color);
+  color: white;
+  border: none;
+  width: 2.5rem;
+  aspect-ratio: 1/1;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .carousel-slider li {
+    flex: 0 0 calc(25% - 1rem); /* 4 foto's zichtbaar op desktop */
+  }
+}
+
+video {
+  max-width: 100%;
 }
