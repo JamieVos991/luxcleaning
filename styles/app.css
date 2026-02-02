@@ -148,12 +148,45 @@ main {
           label {
             display: grid;
             gap: 0.5rem;
+            position: relative;
+
+            input {
+              height: 3rem;
+              font-size: var(--font-size-s);
+              padding-left: 3.5rem;
+              border: 1px solid var(--white-color);
+            }
+            .span-input {
+              background-color: var(--navy-blue-color);
+              height: 3rem;
+              display: grid;
+              place-content: center;
+              border: 1px solid var(--white-color);
+              bottom: 0;
+              position: absolute;
+              aspect-ratio: 1/1;
+
+              svg {
+              }
+            }
           }
+        }
+
+        label {
+          display: grid;
+          gap: 0.5rem;
+        }
+
+        input[type="submit"] {
+          background: var(--dark-sky-blue-color);
+          width: max-content;
+          padding: 0.8rem 2rem;
+          border: none;
         }
       }
     }
 
-    &:nth-of-type(5) {
+    figure {
       hgroup {
         p {
           color: var(--navy-blue-color);

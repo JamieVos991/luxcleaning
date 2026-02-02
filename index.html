@@ -135,15 +135,15 @@
             <legend>Info</legend>
             <label>
               Naam
-              <input type="text" />
+              <input required placeholder="John Doe" type="text" />
             </label>
             <label>
-              E-mail adres
-              <input type="email" />
+              E-mailadres
+              <input required placeholder="Voorbeeld@gmail.com" type="email" />
             </label>
             <label>
               Telefoon
-              <input type="tel" />
+              <input required type="tel" />
             </label>
             <label>
               Bedrijf
@@ -155,22 +155,28 @@
             <legend>Regio</legend>
             <label>
               Adres
-              <input type="text" />
+              <input required type="text" />
             </label>
             <label>
               Postcode
-              <input type="text" />
+              <input required type="text" />
             </label>
             <label>
               Gemeente
-              <input type="text" />
+              <input required type="text" />
             </label>
           </fieldset>
 
           <fieldset>
             <legend>Doel</legend>
-            <input type="radio" name="doel" />
-            <input type="radio" name="doel" />
+            <label for=""
+              >Zakelijk
+              <input type="radio" name="doel" />
+            </label>
+            <label for=""
+              >Particulier
+              <input type="radio" name="doel" />
+            </label>
             <select name="" id="">
               <option value="Ramen">Ramen</option>
               <option value="Zonnepanelen">Zonnepanelen</option>
@@ -187,7 +193,7 @@
           <input type="submit" value="Verzenden" />
         </form>
       </section>
-      <section>
+      <figure>
         <hgroup>
           <h2 class="h2-font">Fotogallerij</h2>
           <p class="heading-paragraaf">
@@ -195,7 +201,7 @@
           </p>
         </hgroup>
         <p>Neem gerust contact op, of vraag vrijblijvend een offerte.</p>
-      </section>
+      </figure>
 
       <button
         id="naarBovenKnop"
