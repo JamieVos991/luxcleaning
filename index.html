@@ -111,24 +111,39 @@
         </hgroup>
         <p>Neem gerust contact op, of vraag vrijblijvend een offerte.</p>
 
-        <form>
+        <form id="offerteForm">
           <fieldset>
             <legend>Info</legend>
             <label>
               Naam
-              <input required placeholder="John Doe" type="text" />
+              <input
+                id="naam"
+                required
+                placeholder="Voor- en achternaam"
+                type="text"
+              />
             </label>
             <label>
               E-mailadres
-              <input required placeholder="Voorbeeld@gmail.com" type="email" />
+              <input
+                id="email"
+                required
+                placeholder="Voorbeeld@gmail.com"
+                type="email"
+              />
             </label>
             <label>
               Telefoon
-              <input required type="tel" />
+              <input
+                id="telefoon"
+                required
+                type="tel"
+                placeholder="0470 12 34 56"
+              />
             </label>
             <label>
               Bedrijf
-              <input type="text" />
+              <input id="bedrijf" type="text" placeholder="Optioneel" />
             </label>
           </fieldset>
 
@@ -136,40 +151,63 @@
             <legend>Regio</legend>
             <label>
               Adres
-              <input required type="text" />
+              <input
+                id="adres"
+                placeholder="Nieuwstraat 145"
+                required
+                type="text"
+              />
             </label>
             <label>
               Postcode
-              <input required type="text" />
+              <input id="postcode" required type="text" placeholder="1000" />
             </label>
             <label>
               Gemeente
-              <input required type="text" />
+              <input id="gemeente" placeholder="Brussel" required type="text" />
             </label>
           </fieldset>
 
           <fieldset>
             <legend>Doel</legend>
-            <label for=""
-              >Zakelijk
-              <input type="radio" name="doel" />
+            <label class="label-radio">
+              Zakelijk <input type="radio" name="doel" value="Zakelijk" />
             </label>
-            <label for=""
-              >Particulier
-              <input type="radio" name="doel" />
+            <label class="label-radio">
+              Particulier <input type="radio" name="doel" value="Particulier" />
             </label>
-            <select name="" id="">
-              <option value="Ramen">Ramen</option>
-              <option value="Zonnepanelen">Zonnepanelen</option>
-              <option value="Veranda's">Veranda's</option>
-              <option value="Rolluiken">Rolluiken</option>
-              <option value="Garagepoorten">Garagepoorten</option>
-              <option value="Dakgoten">Dakgoten</option>
-            </select>
           </fieldset>
-          <label
-            >Extra opmerkingen
-            <textarea></textarea>
+
+          <fieldset>
+            <legend>Diensten</legend>
+            <label class="label-radio">
+              Ramen <input type="checkbox" name="diensten" value="Ramen" />
+            </label>
+            <label class="label-radio">
+              Zonnepanelen
+              <input type="checkbox" name="diensten" value="Zonnepanelen" />
+            </label>
+            <label class="label-radio">
+              Veranda's
+              <input type="checkbox" name="diensten" value="Veranda's" />
+            </label>
+            <label class="label-radio">
+              Rolluiken
+              <input type="checkbox" name="diensten" value="Rolluiken" />
+            </label>
+            <label class="label-radio">
+              Garagepoorten
+              <input type="checkbox" name="diensten" value="Garagepoorten" />
+            </label>
+            <label class="label-radio">
+              Dakgoten
+              <input type="checkbox" name="diensten" value="Dakgoten" />
+            </label>
+          </fieldset>
+
+          <label class="textarea-label">
+            Extra opmerkingen
+            <textarea id="bericht" placeholder="Optioneel"></textarea>
           </label>
           <input type="submit" value="Verzenden" />
         </form>

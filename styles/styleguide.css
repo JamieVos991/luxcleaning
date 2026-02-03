@@ -40,6 +40,7 @@
 
   --line-height-p: 1.6;
   --line-height-heading: 1.2;
+  --border-radius: 0.5rem;
 }
 
 body {
@@ -63,7 +64,7 @@ a {
 
 .anchor-link {
   color: var(--white-color);
-  border-radius: 10rem;
+  border-radius: var(--border-radius);
   font-weight: 500;
   width: max-content;
   padding: 0.8rem 2rem;
@@ -96,6 +97,7 @@ a {
 .span-background {
   position: relative;
   z-index: 2;
+  border-radius: var(--border-radius);
   padding: 0 0.4rem;
   margin-left: -0.4rem;
   box-decoration-break: clone;

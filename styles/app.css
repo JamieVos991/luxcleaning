@@ -1,4 +1,5 @@
 main {
+  /* Algemene sectie instellingen */
   section {
     padding: 3rem 1.5rem;
     display: grid;
@@ -9,6 +10,7 @@ main {
       gap: 1.5rem;
     }
 
+    /* Sectie 1: Hero */
     &:nth-of-type(1) {
       height: 100dvh;
       place-content: center;
@@ -20,7 +22,6 @@ main {
 
       h1 {
         max-width: 60rem;
-
         span {
           background: var(--navy-blue-color);
           color: var(--white-color);
@@ -30,108 +31,92 @@ main {
       }
     }
 
+    /* Sectie 2: Over ons */
     &:nth-of-type(2) {
       color: var(--white-color);
       background-color: var(--navy-blue-color);
 
-      hgroup {
-        p {
-          span {
-            background-color: var(--white-color);
-            color: var(--navy-blue-color);
-          }
-        }
+      hgroup p span {
+        background-color: var(--white-color);
+        color: var(--navy-blue-color);
       }
 
-      hgroup + p:nth-of-type(2) {
+      hgroup + p {
         padding-bottom: 1rem;
       }
 
-      img {
+      video {
         width: 100%;
-        max-width: 30rem;
+        max-width: 100%;
+        border-radius: var(--border-radius);
       }
     }
 
+    /* Sectie 3: Services */
     &:nth-of-type(3) {
-      hgroup {
-        p {
-          color: var(--navy-blue-color);
-
-          span {
-            background: var(--navy-blue-color);
-            color: var(--white-color);
-          }
+      hgroup p {
+        color: var(--navy-blue-color);
+        span {
+          background: var(--navy-blue-color);
+          color: var(--white-color);
         }
       }
 
       article {
         background: var(--navy-blue-color);
         color: var(--white-color);
+        border-radius: var(--border-radius);
         padding: 1.3rem;
         position: relative;
         display: grid;
         gap: 1rem;
 
+        &::after {
+          position: absolute;
+          top: 1rem;
+          right: 1rem;
+          font-size: var(--font-size-l);
+          opacity: 0.5;
+        }
+
         &:nth-of-type(1) {
           margin-top: 1rem;
-
           &::after {
             content: "01";
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            font-size: var(--font-size-l);
           }
         }
-
         &:nth-of-type(2)::after {
           content: "02";
-          position: absolute;
-          top: 1rem;
-          right: 1rem;
-          font-size: var(--font-size-l);
         }
-
         &:nth-of-type(3)::after {
           content: "03";
-          position: absolute;
-          top: 1rem;
-          right: 1rem;
-          font-size: var(--font-size-l);
         }
-
         &:nth-of-type(4)::after {
           content: "04";
-          position: absolute;
-          top: 1rem;
-          right: 1rem;
-          font-size: var(--font-size-l);
         }
       }
     }
 
+    /* Sectie 4: Offerte Formulier */
     &:nth-of-type(4) {
       background: var(--navy-blue-color);
       color: var(--white-color);
 
-      hgroup {
-        p {
-          span {
-            background: var(--white-color);
-            color: var(--navy-blue-color);
-          }
-        }
+      hgroup p span {
+        background: var(--white-color);
+        color: var(--navy-blue-color);
       }
 
       form {
         display: grid;
-        gap: 1rem;
+        gap: 1.5rem;
 
         fieldset {
           padding: 1rem;
           display: grid;
+          border-radius: var(--border-radius);
           gap: 1rem;
+          border: 1px solid rgba(255, 255, 255, 0.2);
 
           &:first-of-type {
             margin-top: 1rem;
@@ -140,48 +125,63 @@ main {
           label {
             display: grid;
             gap: 0.5rem;
-            position: relative;
 
-            input {
-              height: 3rem;
+            input:not([type="checkbox"]):not([type="radio"]) {
+              padding: 0.6rem 0.5rem;
+              border-radius: var(--border-radius);
               font-size: var(--font-size-s);
-              padding-left: 3.5rem;
               border: 1px solid var(--white-color);
             }
-            .span-input {
-              background-color: var(--navy-blue-color);
-              height: 3rem;
-              display: grid;
-              place-content: center;
-              border: 1px solid var(--white-color);
-              bottom: 0;
-              position: absolute;
-              aspect-ratio: 1/1;
+          }
 
-              svg {
-              }
+          .label-radio {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            input[type="checkbox"],
+            input[type="radio"] {
+              height: 1.5rem;
+              aspect-ratio: 1/1;
+              cursor: pointer;
             }
           }
         }
 
-        label {
+        .textarea-label {
           display: grid;
-          gap: 0.5rem;
+          gap: 1rem;
+        }
+
+        textarea {
+          padding: 0.7rem 0.5rem;
+          font-family: inherit;
+          border-radius: var(--border-radius);
+          min-height: 100px;
         }
 
         input[type="submit"] {
-          background: var(--dark-sky-blue-color);
+          background: var(--pastel-gray-color);
           width: max-content;
           padding: 0.8rem 2rem;
+          font-size: 1rem;
+          border-radius: var(--border-radius);
           border: none;
+          cursor: pointer;
+          transition: opacity 0.2s;
+
+          &:hover {
+            opacity: 0.9;
+          }
         }
       }
     }
   }
 
+  /* Naar boven knop */
   #naarBovenKnop {
-    border-radius: 50%;
-    background: var(--dark-sky-blue-color);
+    border-radius: var(--border-radius);
+    background: var(--pastel-gray-color);
     border: none;
     width: 3.5rem;
     aspect-ratio: 1;
@@ -190,24 +190,71 @@ main {
     z-index: 10;
     position: fixed;
     cursor: pointer;
+    display: grid;
+    place-items: center;
   }
 
+  /* Fotogallerij */
   figure {
     padding: 3rem 1.5rem;
     display: grid;
     gap: 1.5rem;
 
-    hgroup {
-      display: grid;
-      gap: 1.5rem;
+    .carousel-slider {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      gap: 1rem;
+      padding: 1rem 0;
+      list-style: none;
+      scrollbar-width: none;
+    }
 
-      p {
-        color: var(--navy-blue-color) !important;
+    .carousel-slider::-webkit-scrollbar {
+      display: none;
+    }
 
-        span {
-          background: var(--navy-blue-color);
-          color: var(--white-color);
-        }
+    .carousel-slider li {
+      flex: 0 0 60%;
+      scroll-snap-align: center;
+    }
+
+    .carousel-slider img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: var(--border-radius);
+    }
+
+    .carousel-nav {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .carousel-nav button {
+      background: var(--navy-blue-color);
+      color: white;
+      border: none;
+      width: 2.5rem;
+      aspect-ratio: 1/1;
+      cursor: pointer;
+      border-radius: var(--border-radius);
+    }
+
+    @media (min-width: 768px) {
+      .carousel-slider li {
+        flex: 0 0 calc(25% - 1rem);
+      }
+    }
+
+    hgroup p {
+      color: var(--navy-blue-color) !important;
+
+      span {
+        background: var(--navy-blue-color);
+        color: var(--white-color);
       }
     }
   }
@@ -225,130 +272,4 @@ footer {
     color: var(--white-color);
     text-decoration: underline;
   }
-}
-
-.comparison-slider {
-  position: relative;
-  width: 100%;
-  max-width: 800px;
-  height: 500px;
-  overflow: hidden;
-  user-select: none;
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-
-  .image-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: 100%;
-    overflow: hidden;
-    z-index: 2;
-  }
-
-  .slider {
-    position: absolute;
-    inset: 0;
-    opacity: 0;
-    cursor: ew-resize;
-    z-index: 4;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-  }
-
-  .slider-button {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 4px;
-    background: white;
-    z-index: 3;
-    pointer-events: none;
-    transform: translateX(-50%);
-
-    &::after {
-      content: "↔";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: white;
-      color: var(--navy-blue-color);
-      padding: 10px;
-      border-radius: 50%;
-      font-weight: bold;
-    }
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Slider Basis */
-.carousel-slider {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  gap: 1rem;
-  padding: 1rem 0;
-  list-style: none;
-  scrollbar-width: none; /* Verberg scrollbar Firefox */
-}
-
-.carousel-slider::-webkit-scrollbar {
-  display: none; /* Verberg scrollbar Chrome/Safari */
-}
-
-.carousel-slider li {
-  flex: 0 0 60%; /* Compactere afbeeldingen op mobiel */
-  scroll-snap-align: center;
-}
-
-.carousel-slider img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-/* Navigatie */
-.carousel-nav {
-  display: flex;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.carousel-nav button {
-  background: var(--navy-blue-color);
-  color: white;
-  border: none;
-  width: 2.5rem;
-  aspect-ratio: 1/1;
-  cursor: pointer;
-}
-
-@media (min-width: 768px) {
-  .carousel-slider li {
-    flex: 0 0 calc(25% - 1rem); /* 4 foto's zichtbaar op desktop */
-  }
-}
-
-video {
-  max-width: 100%;
 }
