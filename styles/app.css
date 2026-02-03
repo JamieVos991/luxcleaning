@@ -234,10 +234,12 @@ main {
     }
 
     .carousel-nav button {
-      background: var(--navy-blue-color);
+      background: black;
       color: white;
       border: none;
       width: 2.5rem;
+      display: grid;
+      place-content: center;
       aspect-ratio: 1/1;
       cursor: pointer;
       border-radius: var(--border-radius);
@@ -262,14 +264,40 @@ main {
 
 footer {
   background: var(--navy-blue-color);
-  height: 20vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  min-height: 50vh;
+  color: var(--white-color);
+  padding: 2rem 1rem;
   gap: 1rem;
+  display: grid;
+
+  ul {
+    padding: 1rem 0;
+
+    &:last-of-type {
+      display: grid;
+      text-align: center;
+      gap: 0.4rem;
+      font-size: 0.9rem;
+
+      li {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+      }
+    }
+  }
+
+  iframe {
+    height: 20rem;
+    border-radius: var(--border-radius);
+    width: 20rem;
+  }
+
+  img {
+    width: 60%;
+  }
 
   a {
-    color: var(--white-color);
-    text-decoration: underline;
+    color: #8080a9;
   }
 }
