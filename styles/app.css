@@ -238,6 +238,7 @@ main {
       background: black;
       color: white;
       border: none;
+      touch-action: manipulation;
       width: 2.5rem;
       display: grid;
       place-content: center;
