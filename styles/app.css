@@ -160,15 +160,16 @@ main {
           min-height: 100px;
         }
 
-        input[type="submit"] {
-          background: var(--pastel-gray-color);
+        button[type="submit"] {
+          color: var(--black-color);
+          border-radius: var(--border-radius);
+          font-weight: 500;
+          border: none;
+          font-size: 1rem;
           width: max-content;
           padding: 0.8rem 2rem;
-          font-size: 1rem;
-          border-radius: var(--border-radius);
-          border: none;
           cursor: pointer;
-          transition: opacity 0.2s;
+          background: var(--white-color);
 
           &:hover {
             opacity: 0.9;
