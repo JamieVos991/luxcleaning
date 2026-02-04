@@ -322,14 +322,14 @@ footer {
 
 /* DIRTY */
 .fade-images .dirty {
-  animation: dirtySlide 10s infinite cubic-bezier(0.4, 0, 0.2, 1);
+  animation: dirtySlide 8s infinite cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .fade-images .clean {
   position: absolute;
   top: 0;
   left: 0;
-  animation: cleanSlide 10s infinite cubic-bezier(0.4, 0, 0.2, 1);
+  animation: cleanSlide 8s infinite cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @keyframes dirtySlide {
