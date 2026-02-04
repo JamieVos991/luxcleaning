@@ -113,14 +113,14 @@ main {
         }
 
         figure .dirty {
-          animation: dirtySlider 8s infinite cubic-bezier(0.4, 0, 0.2, 1);
+          animation: dirtySlider 6s infinite cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         figure .clean {
           position: absolute;
           top: 0;
           left: 0;
-          animation: cleanSlider 8s infinite cubic-bezier(0.4, 0, 0.2, 1);
+          animation: cleanSlider 6s infinite cubic-bezier(0.4, 0, 0.2, 1);
         }
       }
     }
