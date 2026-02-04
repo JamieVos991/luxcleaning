@@ -303,3 +303,79 @@ footer {
     color: #8080a9;
   }
 }
+
+.fade-images {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  overflow: hidden;
+}
+
+.fade-images img {
+  width: 100%;
+  display: block;
+  border-radius: var(--border-radius);
+}
+.fade-images:hover img {
+  animation-play-state: paused;
+}
+
+/* DIRTY */
+.fade-images .dirty {
+  animation: dirtySlide 10s infinite cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fade-images .clean {
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: cleanSlide 10s infinite cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes dirtySlide {
+  /* Dirty visible */
+  0%,
+  20% {
+    transform: translateX(0);
+  }
+
+  /* Slides out left */
+  30% {
+    transform: translateX(-100%);
+  }
+
+  /* Stays off */
+  70% {
+    transform: translateX(-100%);
+  }
+
+  /* Slides back in */
+  80%,
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes cleanSlide {
+  /* Starts off right */
+  0%,
+  20% {
+    transform: translateX(100%);
+  }
+
+  /* Slides in */
+  30% {
+    transform: translateX(0);
+  }
+
+  /* Stays visible */
+  70% {
+    transform: translateX(0);
+  }
+
+  /* Slides out right */
+  80%,
+  100% {
+    transform: translateX(100%);
+  }
+}
