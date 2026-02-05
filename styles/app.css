@@ -108,7 +108,7 @@ main {
           border-radius: var(--border-radius);
 
           &:hover {
-            animation-play-state: paused;
+            /* animation-play-state: paused; */
           }
         }
 
@@ -154,11 +154,16 @@ main {
             display: grid;
             gap: 0.5rem;
 
+            input {
+              background: rgba(255, 255, 255, 0.15);
+              border: 1px solid rgba(255, 255, 255, 0.2);
+              color: white;
+            }
+
             input:not([type="checkbox"]):not([type="radio"]) {
               padding: 0.6rem 0.5rem;
               border-radius: var(--border-radius);
               font-size: var(--font-size-s);
-              border: 1px solid var(--white-color);
             }
           }
 
@@ -171,6 +176,7 @@ main {
             input[type="radio"] {
               height: 1.5rem;
               aspect-ratio: 1/1;
+              border: none;
               cursor: pointer;
             }
           }
@@ -186,6 +192,10 @@ main {
           font-family: inherit;
           border-radius: var(--border-radius);
           min-height: 100px;
+
+          background: rgba(255, 255, 255, 0.15);
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          color: white;
         }
 
         button[type="submit"] {
