@@ -16,12 +16,17 @@ main {
       place-content: center;
       gap: 2.5rem;
 
+      @media (min-width: 1100px) {
+        text-align: center;
+        justify-items: center;
+      }
+
       img {
         width: 14rem;
       }
 
       h1 {
-        max-width: 60rem;
+        max-width: 50rem;
         span {
           background: var(--navy-blue-color);
           color: var(--white-color);
@@ -35,20 +40,28 @@ main {
     &:nth-of-type(2) {
       color: var(--white-color);
       background-color: var(--navy-blue-color);
+      gap: 3rem;
+
+      @media (min-width: 1100px) {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+
+      div {
+        display: grid;
+        gap: 1rem;
+      }
 
       hgroup p span {
         background-color: var(--white-color);
         color: var(--navy-blue-color);
       }
 
-      hgroup + p {
-        padding-bottom: 1rem;
-      }
-
       video {
         width: 100%;
-        max-width: 100%;
         border-radius: var(--border-radius);
+        max-width: 20rem;
       }
     }
 
@@ -62,11 +75,18 @@ main {
         }
       }
 
+      div {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
       article {
         background: var(--navy-blue-color);
         color: var(--white-color);
         border-radius: var(--border-radius);
         padding: 1.3rem;
+        max-width: 25rem;
         position: relative;
         display: grid;
         gap: 1rem;
@@ -80,7 +100,10 @@ main {
         }
 
         &:nth-of-type(1) {
-          margin-top: 1rem;
+          @media (max-width: 800px) {
+            margin-top: 1rem;
+          }
+
           &::after {
             content: "01";
           }

@@ -27,8 +27,8 @@
   --font-size-xs: 0.8rem;
   --font-size-s: 1rem;
   --font-size-l: 1.4rem;
-  --font-size-xl: clamp(2.5rem, 8vw, 6rem);
-  --font-size-xxl: clamp(2.5rem, 10vw, 6rem);
+  --font-size-xl: clamp(2.5rem, 8vw, 4rem);
+  --font-size-xxl: clamp(2.5rem, 10vw, 4rem);
 
   --navy-blue-color: #010154;
   --white-color: #fff;
@@ -51,6 +51,7 @@ body {
 
 p {
   line-height: var(--line-height-p);
+  max-width: 35rem;
 }
 
 ul,
@@ -74,6 +75,7 @@ a {
 .h1-font {
   font-size: var(--font-size-xxl);
   line-height: var(--line-height-heading);
+  max-width: 25rem;
 }
 
 .h2-font {
