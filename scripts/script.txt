@@ -1,3 +1,4 @@
+// scripts/script.js
 document.addEventListener("DOMContentLoaded", () => {
   // --- 1. Vergelijking Slider (Sectie 2) ---
   const compInput = document.querySelector('.comparison-slider .slider');
@@ -63,48 +64,50 @@ document.addEventListener("DOMContentLoaded", () => {
     topBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
   }
 
-  // --- 4. Formulier verzenden naar Nodemailer ---
+  // --- 4. Formulier verzenden naar Firebase Function ---
   const form = document.getElementById('offerteForm');
   if (form) {
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      
-      // Verzamel geselecteerde checkboxes
-      const geselecteerdeDiensten = [];
-      document.querySelectorAll('input[name="diensten"]:checked').forEach((cb) => {
-        geselecteerdeDiensten.push(cb.value);
-      });
 
-      // Bouw het data object op (Zorg dat deze ID's in je HTML staan!)
+      const geselecteerdeDiensten = Array.from(
+        form.querySelectorAll('input[name="diensten"]:checked')
+      ).map((el) => el.value);
+
       const data = {
         naam: document.getElementById('naam').value,
         email: document.getElementById('email').value,
         telefoon: document.getElementById('telefoon').value,
-        bedrijf: document.getElementById('bedrijf').value, // Nieuw
+        bedrijf: document.getElementById('bedrijf').value,
         adres: document.getElementById('adres').value,
         postcode: document.getElementById('postcode').value,
         gemeente: document.getElementById('gemeente').value,
-        doel: document.querySelector('input[name="doel"]:checked')?.value || "Niet opgegeven", // Nieuw
-        bericht: document.getElementById('bericht').value,
-        diensten: geselecteerdeDiensten
+        doel: form.querySelector('input[name="doel"]:checked')?.value || "Niet opgegeven",
+        diensten: geselecteerdeDiensten,
+        bericht: document.getElementById('bericht').value
       };
-    
+
       try {
-        const response = await fetch('http://localhost:3000/send-email', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(data)
-        });
-    
-        if (response.ok) {
+        const response = await fetch(
+          'https://sendemail-gk3ngudtfq-uc.a.run.app', 
+          {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+          }
+        );
+
+        const json = await response.json();
+
+        if (json.success) {
           alert('Bedankt! Uw offerteaanvraag is succesvol verzonden.');
           form.reset();
         } else {
-          alert('Er ging iets mis op de server. Probeer het later opnieuw.');
+          alert('Er ging iets mis: ' + json.error);
         }
-      } catch (error) {
-        console.error('Fout:', error);
-        alert('Kon geen verbinding maken met de server. Staat de Node.js server aan?');
+      } catch (err) {
+        console.error('Fout bij verzenden:', err);
+        alert('Kon geen verbinding maken met de server. Probeer het later opnieuw.');
       }
     });
   }

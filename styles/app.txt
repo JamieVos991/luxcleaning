@@ -165,7 +165,7 @@ main {
         fieldset {
           padding: 1rem;
           display: grid;
-          max-width: 30rem; 
+          max-width: 30rem;
           border-radius: var(--border-radius);
           gap: 1rem;
           border: 1px solid rgba(255, 255, 255, 0.2);
@@ -198,9 +198,10 @@ main {
 
             input[type="checkbox"],
             input[type="radio"] {
-              height: 1.5rem;
+              -webkit-transform: scale(1.5, 1.5);
               aspect-ratio: 1/1;
               border: none;
+              outline: none;
               cursor: pointer;
             }
           }

@@ -75,6 +75,7 @@ a {
 .h1-font {
   font-size: var(--font-size-xxl);
   line-height: var(--line-height-heading);
+  color: var(--navy-blue-color);
   max-width: 25rem;
 }
 
